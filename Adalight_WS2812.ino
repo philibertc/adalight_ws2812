@@ -23,14 +23,18 @@ void setup() {
   // Use NEOPIXEL to keep true colors
   FastLED.addLeds<NEOPIXEL, DATA_PIN>(leds, NUM_LEDS);
   
-  // Initial RGB flash
-  LEDS.showColor(CRGB(255, 0, 0));
+  // Initial RGB flash (for test)
+  /*LEDS.showColor(CRGB(255, 0, 0));
   delay(500);
   LEDS.showColor(CRGB(0, 255, 0));
   delay(500);
   LEDS.showColor(CRGB(0, 0, 255));
   delay(500);
-  LEDS.showColor(CRGB(0, 0, 0));
+  LEDS.showColor(CRGB(0, 0, 0));*/
+  
+  // Initial white flash
+  LEDS.showColor(CRGB(200, 200, 200));
+  delay(2000);
   
   Serial.begin(serialRate);
   // Send "Magic Word" string to host
